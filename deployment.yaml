@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: web
-  namespace: web
+  namespace: default
   labels:
     app: web
 spec:
@@ -19,7 +19,8 @@ spec:
         "beta.kubernetes.io/os": linux
       containers:
         - name: basic-web-app
-          image: basic-web-app
+          image: basic-web-image:latest
+          imagePullPolicy: Never
           ports:
             - name: http
               containerPort: 3000

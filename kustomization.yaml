@@ -3,9 +3,8 @@ kind: Kustomization
 resources:
   - deployment.yaml
   - service.yaml
-  - namespace.yaml
-namespace: web
+namespace: default
 images:
-  - name: basic-web-app
-    newName: basic-web-app
+  - name: basic-web-image
+    newName: basic-web-image
     newTag: v1

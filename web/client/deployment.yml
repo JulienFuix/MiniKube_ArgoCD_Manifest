@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: basicwebapp
+  namespace: client
+  labels:
+    app: client
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: client
+  template:
+    metadata:
+      labels:
+        app: client
+    spec:
+      nodeSelector:
+        "beta.kubernetes.io/os": linux
+      containers:
+        - name: basicwebapp
+          image: basicwebapp:latest
+          imagePullPolicy: Never
+          ports:
+            - name: http
+              containerPort: 3000

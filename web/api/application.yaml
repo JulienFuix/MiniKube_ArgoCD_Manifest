@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: api
+  namespace: api
+  annotations:
+    argocd.argoproj.io/application.parent: web
+spec:
+  project: web
+  source:
+    repoURL: https://github.com/JulienFuix/MiniKube_ArgoCD_Manifest
+    targetRevision: HEAD
+    path: /web/api
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default

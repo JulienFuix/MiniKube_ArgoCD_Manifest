@@ -15,7 +15,7 @@ spec:
       kind: Application
   project: default
   source:
-    path: bootstrap/argo-cd
+    path: bootstrap/argo_cd
     repoURL: https://github.com/JulienFuix/MiniKube_ArgoCD_Manifest
   syncPolicy:
     automated:

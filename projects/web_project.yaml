@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: web
+  namespace: argocd
+spec:
+  destinations:
+  - namespace: web
+  sourceRepos:
+  - '*'
+  roles:
+  - name: read-write
+    policies:
+    - p, applications, applications-sync, default/*

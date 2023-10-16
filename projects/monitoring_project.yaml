@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: monitoring
+  namespace: argocd
+spec:
+  destinations:
+  - namespace: monitoring
+  sourceRepos:
+  - '*'
+  roles:
+  - name: read-write
+    policies:
+    - p, applications, applications-sync, default/*

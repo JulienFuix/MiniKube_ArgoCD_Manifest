@@ -1,0 +1,14 @@
+# a workaround for https://github.com/argoproj/argo-cd/issues/10593
+#TODO: provide more granular rights, see https://github.com/instadeepai/gitops-base/issues/45
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: argocd-server-test
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: argocd-application-controller
+subjects:
+  - kind: ServiceAccount
+    name: argocd-server
+    namespace: argocd

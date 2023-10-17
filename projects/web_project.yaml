@@ -12,11 +12,8 @@ spec:
       kind: '*'
   destinations:
   - namespace: argocd
-    name: '*'
   - namespace: api
-    name: '*'
   - namespace: client
-    name: '*'
   sourceRepos:
   - '*'
   sourceNamespaces:

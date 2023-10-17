@@ -21,7 +21,7 @@ spec:
   sourceNamespaces:
   - api
   - client
-  roles:
-  - name: read-write
-    policies:
-    - p, applications, applications-sync, default/*
+  # roles:
+  # - name: read-write
+  #   policies:
+  #   - p, applications, applications-sync, default/*

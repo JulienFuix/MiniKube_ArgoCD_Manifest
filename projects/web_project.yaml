@@ -14,8 +14,8 @@ spec:
   - namespace: argocd
   - namespace: api
   - namespace: client
-  - namespace: '*'
-    name: api*
+  - namespace: api
+    server: in-cluster
   sourceRepos:
   - '*'
   sourceNamespaces:

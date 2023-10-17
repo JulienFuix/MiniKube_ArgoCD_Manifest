@@ -12,3 +12,6 @@ spec:
   destination:
     name: in-cluster
     namespace: api
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true

@@ -10,7 +10,7 @@ spec:
   source:
     repoURL: https://github.com/JulienFuix/MiniKube_ArgoCD_Manifest
     targetRevision: HEAD
-    path: /web/api/
+    path: /web/api
   destination:
     server: https://kubernetes.default.svc
     namespace: api

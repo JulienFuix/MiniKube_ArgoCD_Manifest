@@ -4,7 +4,7 @@ metadata:
   name: api
   namespace: api
   annotations:
-    argocd.argoproj.io/application.parent: web
+    argocd.argoproj.io/application.project: web
 spec:
   project: web
   source:
@@ -12,5 +12,5 @@ spec:
     targetRevision: HEAD
     path: /web/api
   destination:
-    server: https://kubernetes.api.svc
+    server: https://kubernetes.default.svc
     namespace: api

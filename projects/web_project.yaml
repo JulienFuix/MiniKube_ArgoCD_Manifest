@@ -13,12 +13,15 @@ spec:
   destinations:
   - namespace: argocd
     name: in-cluster
-  - namespace: web
+  - namespace: api
+    name: in-cluster
+  - namespace: client
     name: in-cluster
   sourceRepos:
   - '*'
   sourceNamespaces:
-  - web
+  - api
+  - client
   roles:
   - name: read-write
     policies:

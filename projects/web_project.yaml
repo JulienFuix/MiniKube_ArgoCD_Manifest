@@ -12,11 +12,11 @@ spec:
       kind: '*'
   destinations:
   - namespace: argocd
-    name: in-cluster
+    name: '*'
   - namespace: api
-    name: in-cluster
+    name: '*'
   - namespace: client
-    name: in-cluster
+    name: '*'
   sourceRepos:
   - '*'
   sourceNamespaces:

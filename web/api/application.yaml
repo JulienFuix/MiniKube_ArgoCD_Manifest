@@ -3,8 +3,6 @@ kind: Application
 metadata:
   name: api
   namespace: api
-  annotations:
-    argocd.argoproj.io/application.project: web
 spec:
   project: web
   source:

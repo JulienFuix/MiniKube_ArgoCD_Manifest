@@ -4,11 +4,23 @@ metadata:
   name: monitoring
   namespace: argocd
 spec:
+  clusterResourceWhitelist:
+    - group: '*'
+      kind: '*'
+  namespaceResourceWhitelist:
+    - group: '*'
+      kind: '*'
   destinations:
+  - namespace: argocd
+    name: in-cluster
   - namespace: monitoring
+    name: in-cluster
   sourceRepos:
   - '*'
+  sourceNamespaces:
+  - monitoring
   roles:
   - name: read-write
     policies:
     - p, applications, applications-sync, default/*
+

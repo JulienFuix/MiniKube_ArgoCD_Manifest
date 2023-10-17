@@ -4,10 +4,21 @@ metadata:
   name: web
   namespace: argocd
 spec:
+  clusterResourceWhitelist:
+    - group: '*'
+      kind: '*'
+  namespaceResourceWhitelist:
+    - group: '*'
+      kind: '*'
   destinations:
+  - namespace: argocd
+    name: in-cluster
   - namespace: web
+    name: in-cluster
   sourceRepos:
   - '*'
+  sourceNamespaces:
+  - web
   roles:
   - name: read-write
     policies:

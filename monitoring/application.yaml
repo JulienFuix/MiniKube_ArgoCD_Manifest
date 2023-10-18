@@ -3,14 +3,12 @@ kind: Application
 metadata:
   name: monitoring
   namespace: monitoring
-  annotations:
-    argocd.argoproj.io/application.parent: argocd
 spec:
   project: monitoring
   source:
     repoURL: https://github.com/JulienFuix/MiniKube_ArgoCD_Manifest
     targetRevision: HEAD
-    path: /monitoring
+    path: monitoring
   destination:
-    server: https://kubernetes.default.svc
-    namespace: default
+    namespace: monitoring
+    name: in-cluster

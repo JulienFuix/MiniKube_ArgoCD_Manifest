@@ -11,8 +11,6 @@ spec:
     - group: '*'
       kind: '*'
   destinations:
-  - namespace: default
-    name: in-cluster
   - namespace: argocd
     name: in-cluster
   - namespace: monitoring
@@ -21,8 +19,4 @@ spec:
   - '*'
   sourceNamespaces:
   - monitoring
-  roles:
-  - name: read-write
-    policies:
-    - p, applications, applications-sync, default/*
 

@@ -17,8 +17,11 @@ spec:
     name: in-cluster
   - namespace: client
     name: in-cluster
+  - namespace: monitoring
+    name: in-cluster
   sourceRepos:
   - '*'
   sourceNamespaces:
   - api
   - client
+  - monitoring

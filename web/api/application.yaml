@@ -8,9 +8,9 @@ spec:
   source:
     repoURL: https://github.com/JulienFuix/MiniKube_ArgoCD_Manifest
     targetRevision: HEAD
-    path: /web/api
+    path: web/api
   destination:
-    namespace: default
+    namespace: api
     name: in-cluster
   syncPolicy:
     syncOptions:

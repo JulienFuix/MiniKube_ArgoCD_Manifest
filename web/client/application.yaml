@@ -3,14 +3,15 @@ kind: Application
 metadata:
   name: client
   namespace: client
-  annotations:
-    argocd.argoproj.io/application.parent: web
 spec:
   project: web
   source:
     repoURL: https://github.com/JulienFuix/MiniKube_ArgoCD_Manifest
     targetRevision: HEAD
-    path: /web/client
+    path: web/client
   destination:
-    server: https://kubernetes.default.svc
-    namespace: default
+    namespace: client
+    name: in-cluster
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true

@@ -5,6 +5,7 @@ metadata:
   namespace: client
   labels:
     app: client
+    prenom: julien
 spec:
   replicas: 2
   selector:

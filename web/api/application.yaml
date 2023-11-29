@@ -6,7 +6,7 @@ metadata:
 spec:
   project: web
   source:
-    repoURL: https://github.com/JulienFuix/MiniKube_ArgoCD_Manifest
+    repoURL: https://github.com/JulienFuix/MiniKube_ArgoCD_Manifest/web/api
     targetRevision: HEAD
     path: web/api
   destination:

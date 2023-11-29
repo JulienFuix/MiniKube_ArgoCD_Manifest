@@ -25,7 +25,3 @@ spec:
   - api
   - client
   - monitoring
-  syncPolicy:
-    syncOptions:
-    - CreateNamespace=true
-    - FailOnSharedResource=true

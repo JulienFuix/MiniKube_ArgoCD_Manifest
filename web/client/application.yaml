@@ -15,4 +15,4 @@ spec:
   syncPolicy:
     syncOptions:
     - CreateNamespace=true
-    - FailOnSharableResources=true
+    - FailOnSharedResource=true

@@ -4,6 +4,7 @@ metadata:
   name: chartmuseum
   namespace: default
 spec:
+  project: default
   source:
     repoURL: https://github.com/JulienFuix/MiniKube_ArgoCD_Manifest
     targetRevision: HEAD

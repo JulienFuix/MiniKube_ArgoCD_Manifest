@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: chartMuseum-service
+  name: chartmuseum-service
   namespace: default
 spec:
   type: LoadBalancer

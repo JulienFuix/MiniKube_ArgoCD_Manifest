@@ -1,13 +1,13 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: chartMuseum
+  name: chartmuseum
   namespace: default
 spec:
   source:
     repoURL: https://github.com/JulienFuix/MiniKube_ArgoCD_Manifest
     targetRevision: HEAD
-    path: chartMuseum
+    path: chartmuseum
   destination:
     namespace: default
     name: in-cluster

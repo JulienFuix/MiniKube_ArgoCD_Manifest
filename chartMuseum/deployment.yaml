@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: chartMuseum
+  name: chartmuseum
   namespace: default
 spec:
   replicas: 1
@@ -10,7 +10,7 @@ spec:
       nodeSelector:
         "beta.kubernetes.io/os": linux
       containers:
-        - name: chartMuseum
+        - name: chartmuseum
           image: ghcr.io/helm/chartmuseum:v0.14.0
           imagePullPolicy: Always
           ports:

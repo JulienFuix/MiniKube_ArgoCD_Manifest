@@ -8,5 +8,5 @@ spec:
     app: chartmuseum
   ports:
     - protocol: TCP
-      port: 3004
-      targetPort: 3004
+      port: 8084
+      targetPort: 8080

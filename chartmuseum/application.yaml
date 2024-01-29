@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: chartmuseum
-  namespace: default
+  namespace: argocd
 spec:
   project: default
   source:
@@ -10,5 +10,5 @@ spec:
     targetRevision: HEAD
     path: chartmuseum
   destination:
-    namespace: argocd
+    namespace: default
     name: in-cluster

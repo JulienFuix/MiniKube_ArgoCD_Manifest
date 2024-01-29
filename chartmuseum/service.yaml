@@ -1,11 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: chartmuseum-service
+  name: chartmuseum
   namespace: default
 spec:
-  type: LoadBalancer
+  selector:
+    app: chartmuseum
   ports:
     - protocol: TCP
-      port: 80
-      targetPort: 8084
+      port: 3004
+      targetPort: 3004

@@ -12,10 +12,8 @@ spec:
     helm:
       releaseName: web
   destination:
-    - namespace: api
-      name: in-cluster
-    - namespace: client
-      name: in-cluster
+    namespace: default
+    name: in-cluster
   syncPolicy:
     syncOptions:
     - CreateNamespace=true

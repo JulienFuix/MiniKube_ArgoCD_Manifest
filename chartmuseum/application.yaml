@@ -4,11 +4,11 @@ metadata:
   name: chartmuseum
   namespace: default
 spec:
-  project: argocd
+  project: default
   source:
     repoURL: https://github.com/JulienFuix/MiniKube_ArgoCD_Manifest
     targetRevision: HEAD
     path: chartmuseum
   destination:
-    namespace: default
+    namespace: argocd
     name: in-cluster

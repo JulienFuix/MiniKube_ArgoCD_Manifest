@@ -2,7 +2,7 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 namespace: argocd
 resources:
-  - https://raw.githubusercontent.com/JulienFuix/argo-cd/syncOption-default/manifests/install.yaml
+  - https://raw.githubusercontent.com/JulienFuix/argo-cd/syncOption/manifests/install.yaml
   - repo-server-clusterrolebinding.yaml
   - argocd-server-clusterrolebinding.yaml
 components:

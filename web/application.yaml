@@ -6,14 +6,9 @@ metadata:
 spec:
   project: web
   source:
-    chart: web
-    repoURL: http://localhost:8084
-    targetRevision: 0.1.0
-    helm:
-      releaseName: web
+    repoURL: https://github.com/JulienFuix/MiniKube_ArgoCD_Manifest
+    targetRevision: HEAD
+    path: web
   destination:
     namespace: default
     name: in-cluster
-  syncPolicy:
-    syncOptions:
-    - CreateNamespace=true

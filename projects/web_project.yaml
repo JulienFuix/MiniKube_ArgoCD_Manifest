@@ -28,3 +28,6 @@ spec:
   - api
   - client
   - monitoring
+  syncPolicy:
+    syncOptions:
+    - FailOnSharedResource=true
